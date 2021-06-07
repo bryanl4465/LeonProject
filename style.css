@@ -187,15 +187,23 @@ header {
     height: 38px;
 }
 
+.cardImageX {
+    width: 200px;
+    height: 92px;
+}
 
+.cardImageY {
+    width: 169px;
+    height: 200px;
+
+    margin: 0 auto;
+}
 
 a {
     text-decoration: none;
 }
 
 /* <<< Elementos de la pagina "help" */
-
-
 
 .sideNavBarItem {
     color: #bbbbbb;
