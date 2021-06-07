@@ -148,6 +148,8 @@ header {
     flex-direction: row;
     gap: 11vw;
     margin: 3vw 11vw 3vw 11vw;
+
+    box-shadow: 0 0 7px #b0b0b0;
 }
 
 .cardIcon {
@@ -293,6 +295,8 @@ input[type=search] {
     margin: 0 0.5em 0 0;
 
     font-family: 'Inter', sans-serif;
+
+    box-shadow: 0 0 3px #b0b0b0;
 }
 
 input[type=search]:focus {
@@ -307,6 +311,8 @@ input[type=search]:focus {
     margin: 0 0.5em 0 0;
 
     font-family: 'Inter', sans-serif;
+
+    box-shadow: 0 0 3px #b0b0b0;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -331,6 +337,8 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    box-shadow: 0 0 3px #b0b0b0;
 }
 
 .submitButton:active {
@@ -346,6 +354,8 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    box-shadow: 0 0 3px #b0b0b0;
 }
 
 .navBarList {
