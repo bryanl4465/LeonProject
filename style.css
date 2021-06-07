@@ -1,0 +1,531 @@
+/* >>> Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Inter */
+
+body {
+    margin: 0;
+    background-color: #fcfcfc; /* Color de fondo */
+    font-family: 'Inter', sans-serif; /* Fuente */
+}
+
+.centerHorVer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerHor {
+    display: flex;
+    justify-content: center;
+}
+
+.centerVer {
+    display: flex;
+    align-items: center;
+}
+
+/* Envolvedor */
+.wrapper {
+    width: 100vw; /* Establecer el largo como 100 partes de 100 del largo de la pantalla */
+    height: 100vh; /* Establecer el alto como 100 partes de 100 del alto de la pantalla */
+
+    display: grid; /* Modo de vista: cuadricula */
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Establecer 5 columnas */
+    grid-template-rows: repeat(15, minmax(0, 1fr)); /* Establecer 15 filas */
+}
+
+/* >>> Elementos de la cabecera */
+
+/* Cabecera */
+header {
+    grid-column-start: 1; /* Columna inicial */
+    grid-column-end: 6; /* Columna final */
+    grid-row-start: 1; /* Fila inicial */
+    grid-row-end: 3; /* Fila final */
+
+    display: flex; ; /* Modo de vista: flexbox */
+    flex-direction: row; /* Dirección hacia la que fluye el flexbox */
+}
+
+/* Logotipo */
+.logotype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+
+    flex-grow: 1; /* Relación del espacio vacío a tomar */
+}
+
+/* Barra de navegación superior */
+.topNavBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+
+    flex-grow: 2; /* Relación del espacio vacío a tomar */
+}
+
+/* Barra de búsqueda */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1; /* Relación del espacio vacío a tomar */
+}
+
+/* Links de la barra de navegación superior */
+.topNavBarItem {
+    color: #bbbbbb;
+    display: inline;
+    margin: 0 1em 0 1em;
+}
+
+/* <<< Elementos de la cabecera */
+
+
+
+/* >>> Elementos de la pagina "info" */
+
+/* Contenedor de los lados izquierdo y derecho */
+.container {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    display: flex;
+    flex-direction: row;
+    gap: 11vw;
+    margin: 0 11vw 0 11vw;
+}
+
+/* Lado izquierdo */
+.leftSide {
+    display: block;
+    margin: auto;
+
+    width: 75%;
+    flex-grow: 1;
+}
+
+/* Lado derecho */
+.rightSide {
+    width: 500%;
+    flex-grow: 1;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* <<< Elementos de la pagina "info" */
+
+
+
+/* >>> Elementos de la pagina "help" */
+
+.cardsContainer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 16;
+}
+
+.card {
+    background-color: #cdcdcd;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.cardIcon {
+    margin: 0 0.5em 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* <<< Elementos de la pagina "help" */
+
+
+
+.sideNavBarItem {
+    color: #bbbbbb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sideLinkSeen {
+    color: #000000;
+}
+
+.rightSide::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.firstContainer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    padding: 1em 12em 1em 12em;
+}
+
+.secondContainer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    padding: 1em 6em 1em 6em;
+
+    display: none;
+}
+
+.secondLeftContainer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    padding: 1em 3em 1em 6em;
+}
+
+.secondRightContainer {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    padding: 1em 6em 1em 3em;
+}
+
+.zeroLeftContainer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    padding: 1em 3em 1em 6em;
+}
+
+.zeroRightContainer {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 16;
+
+    padding: 1em 6em 1em 3em;
+}
+
+
+input[type=search] {
+    width: 200px;
+    height: 40px;
+    background-color: #ececec;
+    border: solid 3px #ececec;
+    border-radius: 20px;
+
+    padding-left: 1em;
+    margin: 0 0.5em 0 0;
+
+    font-family: 'Inter', sans-serif;
+}
+
+input[type=search]:focus {
+    width: 200px;
+    height: 40px;
+    background-color: #dddddd;
+    border: solid 3px #dddddd;
+    border-radius: 20px;
+    outline: none;
+
+    padding-left: 1em;
+    margin: 0 0.5em 0 0;
+
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+
+    width: 15px;
+    height: 15px;
+    background-color: #ff7575;
+    border-radius: 50%;
+}
+
+.submitButton {
+    width: 40px;
+    height: 40px;
+
+    background-color: #ececec;
+    border: solid 3px #ececec;
+    border-radius: 50%;
+
+    margin: 0 0 0 0.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton:active {
+    width: 40px;
+    height: 40px;
+
+    background-color: #dddddd;
+    border: solid 3px #dddddd;
+    border-radius: 50%;
+
+    margin: 0 0 0 0.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarList {
+    padding: 0;
+}
+
+.linkHover {
+    color: #000000;
+}
+
+.currentLink {
+    color: #7575ff;
+    border-bottom: solid 3px #7575ff;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+
+    width: 15px;
+    height: 15px;
+    background-color: #ff5252;
+    border-radius: 50%;
+}
+
+input[type=submit] {
+    width: 96px;
+    height: 32px;
+    color: #ffffff;
+    background-color: #7575ff;
+    border: solid 3px #7575ff;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+input[type=submit]:active {
+    width: 96px;
+    height: 32px;
+    color: #000000;
+    background-color: #ffffff;
+    border: solid 3px #7575ff;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 240px;
+    height: 30px;
+    background-color: #ececec;
+    border: solid 3px #ececec;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1em;
+    margin-top: 0.5em;
+}
+
+input[type=text]:focus {
+    width: 240px;
+    height: 30px;
+    background-color: #dddddd;
+    border: solid 3px #dddddd;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1em;
+    margin-top: 0.5em;
+}
+
+input[type=email] {
+    width: 240px;
+    height: 30px;
+    background-color: #ececec;
+    border: solid 3px #ececec;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1em;
+    margin-top: 0.5em;
+}
+
+input[type=email]:focus {
+    width: 240px;
+    height: 30px;
+    background-color: #dddddd;
+    border: solid 3px #dddddd;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1em;
+    margin-top: 0.5em;
+}
+
+textarea {
+    background-color: #ececec;
+    border: solid 3px #ececec;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    padding: 1em 0 0 1em;
+    margin-top: 0.5em;
+    resize: none;
+}
+
+textarea:focus {
+    background-color: #dddddd;
+    border: solid 3px #dddddd;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    padding: 1em 0 0 1em;
+    margin-top: 0.5em;
+}
+
+.imgPrincipal {
+    height: 457px;
+    width: 305px;
+    border-radius: 7px;
+}
+
+.menuButton {
+    display: none;
+}
+
+/* >>> TRANSICIONES */
+
+/* Links de la barra de navegación superior */
+.topNavBarItem {
+    transition-delay: 0.5s;
+    transition: color 0.25s;
+}
+
+/* Links de la barra de navegación lateral que se utiliza cuando hay grandes cantidades de texto */
+.sideNavBarItem {
+    transition-delay: 0.5s;
+    transition: color 0.25s;
+}
+
+/* <<< TRANSICIONES */
+
+/* >>> Tamaños de fuentes */
+
+/* Logotipo */
+.logotype {
+    font-size: 1.75vw;
+}
+
+/* Links de la barra de navegación superior */
+.topNavBarItem {
+    font-size: 1.25vw;
+}
+
+/* Links de la barra de navegación lateral que se utiliza cuando hay grandes cantidades de texto */
+.sideNavBarItem {
+    font-size: 1.25vw;
+}
+
+/* Títulos */
+h1 {
+    font-size: 4.5vw;
+}
+
+/* Subtítulos */
+h3 {
+    font-size: 2.5vw;
+}
+
+/* Texto normal */
+body {
+    font-size: 1.5vw;
+}
+
+/* <<< Tamaños de fuentes */
+
+
+
+@media (min-aspect-ratio: 9/21) and  (max-aspect-ratio: 9/16) {
+    .logotype {
+        font-size: calc(2.5vw * 2.5);
+    }
+
+    body {
+        font-size: calc(1.5vw * 2.5);
+    }
+
+    h1 {
+        font-size: calc(4.5vw * 2.5);
+    }
+
+    h3 {
+        font-size: calc(2.5vw * 2.5);
+    }
+
+    .topNavBar {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .menu {
+        flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuButton {
+        width: 13vw;
+        height: 13vw;
+
+        background-color: #ececec;
+        border: solid 3px #ececec;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuImage {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .leftContainer {
+        display: none;
+    }
+
+    .rightContainer {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 16;
+
+        overflow-x: hidden;
+
+        padding: 5vw;
+    }
+}
