@@ -93,7 +93,7 @@ let observer4 = new IntersectionObserver(function() {
     sideL1.classList.remove("sideLinkSeen");
     sideL2.classList.remove("sideLinkSeen");
     sideL3.classList.remove("sideLinkSeen");
-}, { root: document.querySelector('#rightContainer'), threshold: [0.4] });
+}, { root: document.querySelector('#rightContainer'), threshold: [0.3] });
 
 observer4.observe(document.querySelector("#part4"));
 

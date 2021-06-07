@@ -8,9 +8,9 @@ body {
 }
 
 .centerHorVer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Modo de vista: flexbox */
+    justify-content: center; /*  */
+    align-items: center; /*  */
 }
 
 .centerHor {
@@ -86,7 +86,15 @@ header {
 
 /* <<< Elementos de la cabecera */
 
+.noVerScr {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
+.noVerScr::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 
 /* >>> Elementos de la pagina "info" */
 
@@ -104,7 +112,7 @@ header {
 }
 
 /* Lado izquierdo */
-.leftSide {
+.leftSide1, .leftSide2 {
     display: block;
     margin: auto;
 
@@ -113,12 +121,9 @@ header {
 }
 
 /* Lado derecho */
-.rightSide {
+.rightSide1, .rightSide2 {
     width: 500%;
     flex-grow: 1;
-
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 /* <<< Elementos de la pagina "info" */
@@ -135,15 +140,54 @@ header {
 }
 
 .card {
-    background-color: #cdcdcd;
+    background-color: #dddddd;
     border-radius: 15px;
     padding: 1em;
-    margin: 1em;
+
+    display: flex;
+    flex-direction: row;
+    gap: 11vw;
+    margin: 3vw 11vw 3vw 11vw;
 }
 
 .cardIcon {
     margin: 0 0.5em 0 0;
 }
+
+.cardImageContainer {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+}
+
+.cardImage1 {
+    width: 200px;
+    height: 138px;
+}
+
+.cardImage2 {
+    width: 200px;
+    height: 101px;
+}
+
+.cardImage3 {
+    width: 200px;
+    height: 71px;
+}
+
+.cardImage4 {
+    width: 200px;
+    height: 71px;
+}
+
+.cardImage5 {
+    width: 200px;
+    height: 38px;
+}
+
+
 
 a {
     text-decoration: none;
@@ -163,7 +207,12 @@ a {
     color: #000000;
 }
 
-.rightSide::-webkit-scrollbar {
+.rightSide1::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.rightSide2::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
@@ -402,16 +451,12 @@ textarea:focus {
 }
 
 .imgPrincipal {
-    height: 457px;
-    width: 305px;
+    height: 476px;
+    width: 328px;
     border-radius: 7px;
 }
 
-.menuButton {
-    display: none;
-}
-
-/* >>> TRANSICIONES */
+/* >>> Transiciones */
 
 /* Links de la barra de navegación superior */
 .topNavBarItem {
@@ -425,7 +470,7 @@ textarea:focus {
     transition: color 0.25s;
 }
 
-/* <<< TRANSICIONES */
+/* <<< Transiciones */
 
 /* >>> Tamaños de fuentes */
 
@@ -462,6 +507,9 @@ body {
 /* <<< Tamaños de fuentes */
 
 
+.menuButton {
+    display: none;
+}
 
 @media (min-aspect-ratio: 9/21) and  (max-aspect-ratio: 9/16) {
     .logotype {
@@ -469,7 +517,7 @@ body {
     }
 
     body {
-        font-size: calc(1.5vw * 2.5);
+        font-size: calc(1.5vw * 3.5);
     }
 
     h1 {
@@ -514,7 +562,7 @@ body {
         height: 7vw;
     }
 
-    .leftContainer {
+    .leftSide2 {
         display: none;
     }
 
